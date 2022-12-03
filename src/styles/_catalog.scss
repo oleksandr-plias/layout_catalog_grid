@@ -3,11 +3,9 @@
   justify-content: center;
   gap: 48px;
 
-  $columns: 2 488px, 3 768px, 4 1024px;
-
   @each $cols-number, $col-width in $columns {
     @media (min-width: #{$col-width}) {
-      grid-template-columns: repeat(#{$cols-number}, 200px);
+      grid-template-columns: repeat(#{$cols-number}, $card-width);
     }
   }
 
@@ -15,7 +13,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
